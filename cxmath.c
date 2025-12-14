@@ -42,17 +42,6 @@ typedef struct{
     long double z;
 } longVector3;
 
-typedef struct{
-    int x;
-    int y;
-} iVector2;
-
-typedef struct{
-    int x;
-    int y;
-    int z;
-} iVector3;
-
 
 double c_mod(Complex c1){
     return (double){
@@ -156,12 +145,159 @@ longComplex lc_divi(longComplex c1, longComplex c2){
 }
 
 
+double v_norm(Vector2 u){
+    return (double){
+        sqrt_newton((u.x * u.x) + (u.y * u.y))
+    };
+}
 
-int main(){
-    Complex a = {5,4}; //5+4i
-    Complex b = {2,-1};
-    /*Complex result = c_square(a);
-    printf("%f + %f i", result.real, result.imag);*/
-    double result = c_mod(a);
-    printf("%f",result);
+double v_dot(Vector2 u, Vector2 v){
+    return (double){
+        (u.x * v.x) + (u.y * v.y)
+    };
+}
+
+Vector2 v_add(Vector2 u, Vector2 v){
+    return (Vector2){
+        u.x + v.x,
+        u.y + v.y
+    };
+}
+
+Vector2 v_sub(Vector2 u, Vector2 v){
+    return (Vector2){
+        u.x - v.x,
+        u.y - v.y
+    };
+}
+
+Vector2 v_scale(Vector2 u, double k){
+    return (Vector2){
+        u.x * k,
+        u.y * k
+    };
+}
+
+
+long double lv_norm(longVector2 u){
+    return (long double){
+        sqrt_newton((u.x * u.x) + (u.y * u.y))
+    };
+}
+
+long double lv_dot(longVector2 u, longVector2 v){
+    return (long double){
+        (u.x * v.x) + (u.y * v.y)
+    };
+}
+
+longVector2 lv_add(longVector2 u, longVector2 v){
+    return (longVector2){
+        u.x + v.x,
+        u.y + v.y
+    };
+}
+
+longVector2 lv_sub(longVector2 u, longVector2 v){
+    return (longVector2){
+        u.x - v.x,
+        u.y - v.y
+    };
+}
+
+longVector2 lv_scale(longVector2 u, long double k){
+    return (longVector2){
+        u.x * k,
+        u.y * k
+    };
+}
+
+
+double v3_norm(Vector3 u){
+    return (double){
+        sqrt_newton((u.x * u.x) + (u.y * u.y) + (u.z * u.z))
+    };
+}
+
+double v3_dot(Vector3 u, Vector3 v){
+    return (double){
+        (u.x * v.x) + (u.y * v.y) + (u.z * v.z)
+    };
+}
+
+Vector3 v3_add(Vector3 u, Vector3 v){
+    return (Vector3){
+        u.x + v.x,
+        u.y + v.y,
+        u.z + v.z
+    };
+}
+
+Vector3 v3_sub(Vector3 u, Vector3 v){
+    return (Vector3){
+        u.x - v.x,
+        u.y - v.y,
+        u.z - v.z
+    };
+}
+
+Vector3 v3_prod(Vector3 u, Vector3 v){
+    return (Vector3){
+        (u.y * v.z) - (u.z * v.y),
+        (u.z * v.x) - (u.x * v.z),
+        (u.x * v.y) - (u.y * v.x)
+    };
+}
+
+Vector3 v3_scale(Vector3 u, double k){
+    return (Vector3){
+        u.x * k,
+        u.y * k,
+        u.z * k
+    };
+}
+
+
+long double lv3_norm(longVector3 u){
+    return (long double){
+        sqrt_newton((u.x * u.x) + (u.y * u.y) + (u.z * u.z))
+    };
+}
+
+long double lv3_dot(longVector3 u, longVector3 v){
+    return (long double){
+        (u.x * v.x) + (u.y * v.y) + (u.z * v.z)
+    };
+}
+
+longVector3 lv3_add(longVector3 u, longVector3 v){
+    return (longVector3){
+        u.x + v.x,
+        u.y + v.y,
+        u.z + v.z
+    };
+}
+
+longVector3 lv3_sub(longVector3 u, longVector3 v){
+    return (longVector3){
+        u.x - v.x,
+        u.y - v.y,
+        u.z - v.z
+    };
+}
+
+longVector3 lv3_prod(longVector3 u, longVector3 v){
+    return (longVector3){
+        (u.y * v.z) - (u.z * v.y),
+        (u.z * v.x) - (u.x * v.z),
+        (u.x * v.y) - (u.y * v.x)
+    };
+}
+
+longVector3 lv3_scale(longVector3 u, long double k){
+    return (longVector3){
+        u.x * k,
+        u.y * k,
+        u.z * k
+    };
 }
