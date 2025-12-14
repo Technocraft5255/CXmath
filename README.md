@@ -64,7 +64,6 @@ typedef struct {
 
 ### Methods
 - `double c_mod(Complex c)` — returns the modulus of the complex number
-- `double c_arg(Complex c)` — returns the argument (phase) of the complex number
 - `Complex c_conj(Complex c)` — returns the conjugate of the complex number
 - `Complex c_square(Complex c)` — returns the square of the complex number
 - `Complex c_add(Complex a, Complex b)` — adds two complex numbers
@@ -87,14 +86,12 @@ typedef struct {
 
 ### Methods
 - `long double lc_mod(Complex c)` — returns the modulus of the long complex number
-- `long double lc_arg(Complex c)` — returns the argument (phase) of the long complex number
 - `longComplex lc_conj(Complex c)` — returns the conjugate of the long complex number
 - `longComplex lc_square(Complex c)` — returns the square of the long complex number
 - `longComplex lc_add(Complex a, Complex b)` — adds two long complex numbers
 - `longComplex lc_sub(Complex a, Complex b)` — subtracts two long complex numbers
 - `longComplex lc_mult(Complex a, Complex b)` — multiplies two long complex numbers
 - `longComplex lc_divi(Complex a, Complex b)` — divides two long complex numbers
--
 ---
 
 ## Vector2
@@ -108,6 +105,12 @@ typedef struct {
 } Vector2;
 ```
 
+### Methods
+- `double v_norm(Vector2 u)` — returns the norm of a 2D Vector
+- `double v_dot(Vector2 u, Vector2 v)` — returns the dot product of two 2D Vectors
+- `Vector2 v_add(Vector2 u, Vector2 v)` — adds two 2D Vectors
+- `Vector2 v_sub(Vector2 u, Vector2 v)` — subtracts two 2D Vectors
+- `Vector2 v_scale(Vector2 u, double k)` — scales a 2D Vector by a real factor
 ---
 
 ## Vector3
@@ -135,6 +138,12 @@ typedef struct {
 } longVector2;
 ```
 
+### Methods
+- `long double v_norm(longVector2 u)` — returns the norm of a long 2D Vector
+- `long double v_dot(longVector2 u, longVector2 v)` — returns the dot product of two long 2D Vectors
+- `longVector2 v_add(longVector2 u, longVector2 v)` — adds two long 2D Vectors
+- `longVector2 v_sub(longVector2 u, longVector2 v)` — subtracts two long 2D Vectors
+- `longVector2 v_scale(longVector2 u, long double k)` — scales a long 2D Vector by a real factor
 ---
 
 ## longVector3
