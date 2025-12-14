@@ -3,7 +3,7 @@
 
 The development of CXmath is driven by user feedback. Please report any issue or bug.
 
-Pyxel is open source under the [MIT License](LICENSE) and free to use.
+CXmath is open source under the [MIT License](LICENSE) and free to use.
 
 # Specifications
 
