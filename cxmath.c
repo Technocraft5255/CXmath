@@ -1,4 +1,3 @@
-#include <stdio.h>
 #define PI 3.141592653589793
 
 long double sqrt_newton(long double x) {
