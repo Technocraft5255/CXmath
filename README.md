@@ -159,28 +159,3 @@ typedef struct {
 ```
 
 ---
-
-## iVector2
-
-Represents a 2D vector using integer values.
-
-```c
-typedef struct {
-    int x;
-    int y;
-} iVector2;
-```
-
----
-
-## iVector3
-
-Represents a 3D vector using integer values.
-
-```c
-typedef struct {
-    int x;
-    int y;
-    int z;
-} iVector3;
-```
