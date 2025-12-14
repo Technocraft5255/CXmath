@@ -1,3 +1,4 @@
+# CXmath
 **Complex Extended Math**  is a C library that allow you to simplify calculations with vectors and complex numbers
 
 The development of CXmath is driven by user feedback. Please report any issue or bug.
@@ -61,6 +62,16 @@ typedef struct {
 } Complex;
 ```
 
+### Methods
+- `double c_mod(Complex c)` — returns the modulus of the complex number
+- `double c_arg(Complex c)` — returns the argument (phase) of the complex number
+- `Complex c_conj(Complex c)` — returns the conjugate of the complex number
+- `Complex c_square(Complex c)` — returns the square of the complex number
+- `Complex c_add(Complex a, Complex b)` — adds two complex numbers
+- `Complex c_sub(Complex a, Complex b)` — subtracts two complex numbers
+- `Complex c_mult(Complex a, Complex b)` — multiplies two complex numbers
+- `Complex c_divi(Complex a, Complex b)` — divides two complex numbers
+
 ---
 
 ## longComplex
@@ -74,6 +85,16 @@ typedef struct {
 } longComplex;
 ```
 
+### Methods
+- `long double lc_mod(Complex c)` — returns the modulus of the long complex number
+- `long double lc_arg(Complex c)` — returns the argument (phase) of the long complex number
+- `longComplex lc_conj(Complex c)` — returns the conjugate of the long complex number
+- `longComplex lc_square(Complex c)` — returns the square of the long complex number
+- `longComplex lc_add(Complex a, Complex b)` — adds two long complex numbers
+- `longComplex lc_sub(Complex a, Complex b)` — subtracts two long complex numbers
+- `longComplex lc_mult(Complex a, Complex b)` — multiplies two long complex numbers
+- `longComplex lc_divi(Complex a, Complex b)` — divides two long complex numbers
+-
 ---
 
 ## Vector2
