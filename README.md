@@ -5,6 +5,9 @@ The development of CXmath is driven by user feedback. Please report any issue or
 
 CXmath is open source under the [MIT License](LICENSE) and free to use.
 
+Created by : Wayzen, Technocraft, KLB
+Documented by : Technocraft, Wayzen
+
 # Specifications
 
 - Low memory ressources use
