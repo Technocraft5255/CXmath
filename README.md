@@ -51,8 +51,6 @@ No additional dependencies or linking steps are required.
  - [`Vector3`](#Vector3)
  - [`longVector2`](#longVector2)
  - [`longVector3`](#longVector3)
- - [`iVector2`](#iVector2)
- - [`iVector3`](#iVector3)
 
 
 ## Complex
