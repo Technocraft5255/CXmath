@@ -11,17 +11,11 @@
 #define c_mult(a, b) _Generic((a), Complex: complex_mult, longComplex: long_complex_mult )(a, b)
 #define c_divi(a, b) _Generic((a), Complex: complex_divi, longComplex: long_complex_divi )(a, b)
 
-#define v2_norm(a) _Generic((a), Vector2: vector2_norm, longVector2: long_vector2_norm )(a)
-#define v2_dot(a, b) _Generic((a), Vector2: vector2_dot, longVector2: long_vector2_dot )(a, b)
-#define v2_add(a, b) _Generic((a), Vector2: vector2_add, longVector2: long_vector2_add )(a, b)
-#define v2_sub(a, b) _Generic((a), Vector2: vector2_sub, longVector2: long_vector2_sub )(a, b)
-#define v2_scale(a, b) _Generic((a), Vector2: vector2_scale, longVector2: long_vector2_scale )(a, b)
-
-#define v3_norm(a) _Generic((a), Vector3: vector3_norm, longVector3: long_vector3_norm )(a)
-#define v3_dot(a, b) _Generic((a), Vector3: vector3_dot, longVector3: long_vector3_dot )(a, b)
-#define v3_add(a, b) _Generic((a), Vector3: vector3_add, longVector3: long_vector3_add )(a, b)
-#define v3_sub(a, b) _Generic((a), Vector3: vector3_sub, longVector3: long_vector3_sub )(a, b)
-#define v3_scale(a, b) _Generic((a), Vector3: vector3_scale, longVector3: long_vector3_scale )(a, b)
+#define v_norm(a) _Generic((a), Vector2: vector2_norm, longVector2: long_vector2_norm, Vector3: vector3_norm, longVector3: long_vector3_norm )(a)
+#define v_dot(a, b) _Generic((a), Vector2: vector2_dot, longVector2: long_vector2_dot, Vector3: vector3_dot, longVector3: long_vector3_dot )(a, b)
+#define v_add(a, b) _Generic((a), Vector2: vector2_add, longVector2: long_vector2_add, Vector3: vector3_add, longVector3: long_vector3_add )(a, b)
+#define v_sub(a, b) _Generic((a), Vector2: vector2_sub, longVector2: long_vector2_sub, Vector3: vector3_sub, longVector3: long_vector3_sub )(a, b)
+#define v_scale(a, b) _Generic((a), Vector2: vector2_scale, longVector2: long_vector2_scale, Vector3: vector3_scale, longVector3: long_vector3_scale )(a, b)
 
 
 long double sqrt_newton(long double x) {
@@ -289,19 +283,19 @@ Vector3 vector3_scale(Vector3 u, double k){
 }
 
 
-long double lv3_norm(longVector3 u){
+long double longvector3_norm(longVector3 u){
     return (long double){
         sqrt_newton((u.x * u.x) + (u.y * u.y) + (u.z * u.z))
     };
 }
 
-long double lv3_dot(longVector3 u, longVector3 v){
+long double longvector3_dot(longVector3 u, longVector3 v){
     return (long double){
         (u.x * v.x) + (u.y * v.y) + (u.z * v.z)
     };
 }
 
-longVector3 lv3_add(longVector3 u, longVector3 v){
+longVector3 longvector3_add(longVector3 u, longVector3 v){
     return (longVector3){
         u.x + v.x,
         u.y + v.y,
@@ -309,7 +303,7 @@ longVector3 lv3_add(longVector3 u, longVector3 v){
     };
 }
 
-longVector3 lv3_sub(longVector3 u, longVector3 v){
+longVector3 longvector3_sub(longVector3 u, longVector3 v){
     return (longVector3){
         u.x - v.x,
         u.y - v.y,
@@ -317,7 +311,7 @@ longVector3 lv3_sub(longVector3 u, longVector3 v){
     };
 }
 
-longVector3 lv3_prod(longVector3 u, longVector3 v){
+longVector3 longvector3_prod(longVector3 u, longVector3 v){
     return (longVector3){
         (u.y * v.z) - (u.z * v.y),
         (u.z * v.x) - (u.x * v.z),
@@ -325,7 +319,7 @@ longVector3 lv3_prod(longVector3 u, longVector3 v){
     };
 }
 
-longVector3 lv3_scale(longVector3 u, long double k){
+longVector3 longvector3_scale(longVector3 u, long double k){
     return (longVector3){
         u.x * k,
         u.y * k,
