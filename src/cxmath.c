@@ -11,17 +11,12 @@
 #define c_mult(a, b) _Generic((a), Complex: complex_mult, longComplex: long_complex_mult )(a, b)
 #define c_divi(a, b) _Generic((a), Complex: complex_divi, longComplex: long_complex_divi )(a, b)
 
-#define v2_norm(a) _Generic((a), Vector2: vector2_norm, longVector2: long_vector2_norm )(a)
-#define v2_dot(a, b) _Generic((a), Vector2: vector2_dot, longVector2: long_vector2_dot )(a, b)
-#define v2_add(a, b) _Generic((a), Vector2: vector2_add, longVector2: long_vector2_add )(a, b)
-#define v2_sub(a, b) _Generic((a), Vector2: vector2_sub, longVector2: long_vector2_sub )(a, b)
-#define v2_scale(a, b) _Generic((a), Vector2: vector2_scale, longVector2: long_vector2_scale )(a, b)
-
-#define v3_norm(a) _Generic((a), Vector3: vector3_norm, longVector3: long_vector3_norm )(a)
-#define v3_dot(a, b) _Generic((a), Vector3: vector3_dot, longVector3: long_vector3_dot )(a, b)
-#define v3_add(a, b) _Generic((a), Vector3: vector3_add, longVector3: long_vector3_add )(a, b)
-#define v3_sub(a, b) _Generic((a), Vector3: vector3_sub, longVector3: long_vector3_sub )(a, b)
-#define v3_scale(a, b) _Generic((a), Vector3: vector3_scale, longVector3: long_vector3_scale )(a, b)
+#define v_norm(a) _Generic((a), Vector2: vector2_norm, longVector2: long_vector2_norm, Vector3: vector3_norm, longVector3: long_vector3_norm)(a)
+#define v_dot(a, b) _Generic((a), Vector2: vector2_dot, longVector2: long_vector2_dot, Vector3: vector3_dot, longVector3: long_vector3_dot)(a, b)
+#define v_add(a, b) _Generic((a), Vector2: vector2_add, longVector2: long_vector2_add, Vector3: vector3_add, longVector3: long_vector3_add)(a, b)
+#define v_sub(a, b) _Generic((a), Vector2: vector2_sub, longVector2: long_vector2_sub, Vector3: vector3_sub, longVector3: long_vector3_sub)(a, b)
+#define v_scale(a, b) _Generic((a), Vector2: vector2_scale, longVector2: long_vector2_scale, Vector3: vector3_scale, longVector3: long_vector3_scale)(a, b)
+#define v_prod(a, b) _Generic((a), Vector2: vector2_dot, longVector2: long_vector2_dot, Vector3: vector3_prod, longVector3: long_vector3_prod)(a, b)
 
 
 long double sqrt_newton(long double x) {
