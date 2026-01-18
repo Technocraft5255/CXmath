@@ -2,7 +2,7 @@
 
 #define PI 3.141592653589793
 
-#define c_mod(a, b) _Generic((a), Complex: complex_mod, longComplex: long_complex_mod )(a, b)
+#define c_mod(a) _Generic((a), Complex: complex_mod, longComplex: long_complex_mod )(a)
 #define c_arg(a) _Generic((a), Complex: complex_arg, longComplex: long_complex_arg )(a)
 #define c_conj(a) _Generic((a), Complex: complex_conj, longComplex: long_complex_conj )(a)
 #define c_square(a) _Generic((a), Complex: complex_square, longComplex: long_complex_square )(a)
