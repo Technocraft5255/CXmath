@@ -9,7 +9,7 @@
 #define c_add(a, b) _Generic((a), Complex: complex_add, longComplex: long_complex_add )(a, b)
 #define c_sub(a, b) _Generic((a), Complex: complex_sub, longComplex: long_complex_sub )(a, b)
 #define c_mult(a, b) _Generic((a), Complex: complex_mult, longComplex: long_complex_mult )(a, b)
-#define c_divi(a, b) _Generic((a), Complex: complex_divi, longComplex: long_complex_divi )(a, b)
+#define c_div(a, b) _Generic((a), Complex: complex_div, longComplex: long_complex_div )(a, b)
 
 #define v_norm(a) _Generic((a), Vector2: vector2_norm, longVector2: long_vector2_norm, Vector3: vector3_norm, longVector3: long_vector3_norm)(a)
 #define v_dot(a, b) _Generic((a), Vector2: vector2_dot, longVector2: long_vector2_dot, Vector3: vector3_dot, longVector3: long_vector3_dot)(a, b)
@@ -108,7 +108,7 @@ Complex complex_mult(Complex c1, Complex c2){
     };
 }
 
-Complex complex_divi(Complex c1, Complex c2){
+Complex complex_div(Complex c1, Complex c2){
     return (Complex){
         ((c1.real * c2.real) + (c1.imag * c2.imag))/(c2.real * c2.real + c2.imag * c2.imag),
         ((c1.imag * c2.real) - (c1.real * c2.imag))/(c2.real * c2.real + c2.imag * c2.imag)
@@ -163,7 +163,7 @@ longComplex long_complex_mult(longComplex c1, longComplex c2){
     };
 }
 
-longComplex long_complex_divi(longComplex c1, longComplex c2){
+longComplex long_complex_div(longComplex c1, longComplex c2){
     return (longComplex){
         ((c1.real * c2.real) + (c1.imag * c2.imag))/(c2.real * c2.real + c2.imag * c2.imag),
         ((c1.imag * c2.real) - (c1.real * c2.imag))/(c2.real * c2.real + c2.imag * c2.imag)
