@@ -15,32 +15,32 @@ CXmath is open source under the [MIT License](LICENSE) and free to use.
 - Written in standard C (C99 or C11)
 - 2D and 3D Vector support
 - Complex number support
-- Portable header library
 
 # How to Install
 
-CXmath is a header-only C library, so installation is simple.
+CXmath is a C compiled library, so installation is simple.
+***Coming soon***
 
-1. Clone the repository
+[1. Clone the repository]:.
 
-```git
-git clone https://github.com/Technocraft5255/CXmath.git
-```
+[```git]:.
+[git clone https://github.com/Technocraft5255/CXmath.git]:.
+[```]:.
 
-2. Include the library in your project
+[2. Include the library in your project]:.
 
-Copy the cxmath.h file into your project directory, or keep it somewhere accessible.
+[Copy the cxmath.h file into your project directory, or keep it somewhere accessible.]:.
 
-Then include it in your C source files:
+[Then include it in your C source files:]:.
 
-```c
-#include "cxmath.h"
-```
+[```c]:.
+[#include "cxmath.h"]:.
+[```]:.
 
-3. Compile your project
+[3. Compile your project]:.
 
-Compile your project normally with a C99 or C11 compatible compiler.
-You just need to add ```-lcxmath``` when compiling
+[Compile your project normally with a C99 or C11 compatible compiler.]:.
+[You just need to add ```-lcxmath``` when compiling]:.
 
 # Documentation
 
@@ -66,7 +66,7 @@ typedef struct {
 
 ### Methods
 - `double c_mod(Complex c)` — returns the modulus of the complex number
-- `double c_arg(Complex c)` — returns the signed argument (between $ [-\pi, \pi] $) of the complex number
+- `double c_arg(Complex c)` — returns the signed argument (between $ [-\pi, \pi] $) of the complex number (*Not fully implemented yet*)
 - `Complex c_conj(Complex c)` — returns the conjugate of the complex number
 - `Complex c_square(Complex c)` — returns the square of the complex number
 - `Complex c_add(Complex a, Complex b)` — adds two complex numbers
@@ -89,7 +89,7 @@ typedef struct {
 
 ### Methods
 - `long double c_mod(longComplex c)` — returns the modulus of the long complex number
-- `long double c_arg(longComplex c)` — returns the signed argument (between $ [-\pi, \pi] $) of the long complex number
+- `long double c_arg(longComplex c)` — returns the signed argument (between $ [-\pi, \pi] $) of the long complex number (*Not fully implemented yet*)
 - `longComplex c_conj(longComplex c)` — returns the conjugate of the long complex number
 - `longComplex c_square(longComplex c)` — returns the square of the long complex number
 - `longComplex c_add(longComplex a, longComplex b)` — adds two long complex numbers
