@@ -1,1 +1,13 @@
 .vscode/c_cpp_properties.json
+build/
+*.o
+*.a
+*.so
+*.dll
+*.exe
+
+python/
+*.py
+
+release/
+*.zip
